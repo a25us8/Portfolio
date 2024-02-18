@@ -1,0 +1,494 @@
+:root {
+    --primary-color: #33383C;
+    --secondary-color: #33383C;
+}
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;200;300;400;500;600;700;800&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing:border-box ;
+}
+html{scroll-behavior:smooth}
+
+body {
+    font-family: 'Poppins', sans-serif;
+    background: linear-gradient(90deg, #33383C 32%, #ffffff 10%);
+    margin: auto;
+
+}
+#logo{
+    color: #ffffff;
+    font-size: large;
+    font-weight: 600;
+}
+
+/*  NAVBAR  */
+
+header {
+    padding: 1.7rem 0;
+    display: flex;
+    justify-content: space-around;
+    background-color: transparent;
+    align-content: center;
+    box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+}
+
+.logo a {
+    font-size: 1.3rem;
+    font-weight: 800;
+    color: #ffffff;
+    text-decoration: none;
+}
+
+nav {
+    z-index: 1;
+}
+
+nav a {
+    color: #33383C;
+    text-decoration: none;
+    font-size: .97rem;
+    font-weight: 600;
+    padding: 0.4rem 1.3rem;
+
+
+}
+nav a:hover{
+    color: brown;
+}
+
+
+#click {
+    display: none;
+}
+
+.menu {
+    display: none;
+}
+
+/*NAVBAR*/
+
+section {
+    margin: 2rem 8.5rem;
+}
+
+.main {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    margin: 5rem auto;
+}
+
+.main h1 {
+    font-size: 2.5rem;
+    font-weight: 600;
+    color: #33383C;
+}
+
+.Information h1{
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    margin: auto;
+    animation:backcolor 5s linear infinite ;
+}
+
+.social {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    margin-top: 1.7rem;
+}
+
+.social a {
+    color: var(--secondary-color);
+    font-size: 1rem;
+    border: 1px solid #33383C;
+    border-radius: 50%;
+    padding: 0.3rem;
+    text-align: center;
+    width: 27px;
+    height: 25px;
+    display: grid;
+    place-items: center;
+
+}
+
+.social a:hover {
+    color: #fff;
+    background-color: var(--secondary-color);
+    box-shadow: 0 0 20px var(--secondary-color);
+    border-color: var(--secondary-color);
+    transition: all .3s ease-in-out;
+
+}
+
+/* IMAGE*/
+
+.images {
+    width: 25em;
+    height: 25em;
+    border-radius: 50%;
+    margin: auto;
+}
+
+.blue-bg-outer {
+    width: 25em;
+    height: 25em;
+    border-radius: 50%;
+    background: #33383C;
+    display: grid;
+    place-items: center;
+}
+
+.white-bg {
+    width: 21.875em;
+    height: 21.875em;
+    border-radius: 50%;
+    background: #fff;
+    display: grid;
+    place-items: center;
+}
+h2{
+    text-align: center;
+}
+
+.blue-bg {
+    width: 18.75em;
+    height: 18.75em;
+    border-radius: 50%;
+    background: var(--primary-color);
+}
+
+.blue-bg img {
+    position: relative;
+    /* bottom: 30px;
+    right: 20px; */
+    width: 100%;
+    border-radius: 50%;
+}
+a{text-decoration: none;
+
+}
+
+/*BUTTON*/
+.cv-btn {
+    margin-top: 1.5rem;
+    padding: 1em 2.5em;
+    border-radius: 25px;
+    background-color: #33383C;
+    font-size: 1rem;
+    font-weight: bold;
+    color: white;
+    border: 0;
+}
+
+
+/*ANIMATION*/
+
+.animated_text h1 {
+    -webkit-text-stroke: 1px #fff;
+    font-family: Arial, Helvetica, sans-serif;
+    color: transparent;
+    background-repeat: no-repeat;
+    background-image: linear-gradient(var(--primary-color), var(--primary-color));
+    -webkit-background-clip: text;
+    background-clip: none;
+    background-position: -500px 0;
+    animation: backcolor 5s linear infinite;
+}
+
+@keyframes backcolor {
+
+    100% {
+        -webkit-text-stroke: 1px #33383C;
+        background-position: 0 0;
+    }
+}
+@media only screen and (max-width: 1024px) {
+    html {
+        font-size: 80%;
+    }
+
+    section {
+        margin: 0;
+    }
+
+
+}
+
+@media screen and (max-width: 768px) {
+    html {
+        font-size: 100%;
+    }
+
+    body {
+        background: linear-gradient(180deg, #33383C 35%, #ffffff 10%);
+    }
+
+    .menu {
+        display: block;
+    }
+
+    .menu {
+        font-size: 1.5rem;
+        color: #ffffff;
+    }
+
+    header {
+        padding: 0.7rem 1rem;
+        justify-content: space-between;
+    }
+
+    nav {
+        position: absolute;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        background-color: var(--primary-color);
+        left: -100%;
+        width: 100%;
+        top: 3rem;
+        transition: all 0.3s ease;
+    }
+
+    nav a {
+        color: #fff;
+    }
+    #click:checked~nav {
+        left: 0;
+    }
+    .Information {
+        align-items: start;
+    }
+
+}
+
+@media only screen and (max-width: 480px) {
+
+    section {
+        margin: 0 1rem;
+    }
+    .images {
+        min-width: 15em;
+    }
+
+    .blue-bg-outer {
+        width: 20em;
+        height: 20em;
+        margin: auto;
+
+    }
+
+    .white-bg {
+        width: 16.875em;
+        height: 16.875em;
+    }
+
+    .blue-bg {
+        width: 12.75em;
+        height: 12.75em;
+    }
+
+}
+
+@media only screen and (max-width: 320px) {
+    .images {
+        height: 17em;
+    }
+    .blue-bg-outer {
+        width: 16em;
+        height: 16em;
+
+    }
+
+    .white-bg {
+        width: 13em;
+        height: 13em;
+    }
+
+    .blue-bg {
+        width: 11em;
+        height: 11em;
+    }
+
+    .blue-bg img {
+        position: relative;
+        bottom: 20px;
+        right: 10px;
+        width: 100%;
+    }
+}
+/* Add this CSS to style the cards */
+
+.card {
+    margin-bottom: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(32, 2, 2, 0.1);
+    background-color: #f8f9fa; /* Change background color here */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card-title {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card-text {
+    font-size: 1.1em;
+}
+
+/* Optional: Adjust styling for different screen sizes */
+@media (max-width: 768px) {
+    .card {
+        margin-bottom: 30px;
+    }
+
+    .card-title {
+        font-size: 1.3em;
+    }
+
+    .card-text {
+        font-size: 1em;
+    }
+}
+/* Add this CSS to set the background image */
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(50, 43, 43, 0.1);
+    overflow: hidden; /* Ensure contents don't overflow */
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card img {
+    max-width: 100%;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    background-image: "ayu.jpg"; /* Add path to your profile picture */
+    background-size: cover;
+    background-position: center;
+}
+
+.card p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    margin-bottom: 0; /* Remove default margin */
+}
+
+/* Optional: Adjust styling for different screen sizes */
+@media (max-width: 768px) {
+    .card img {
+        border-radius: 10px;
+    }
+}
+/* Add this CSS to style the project cards portfolio */
+
+#portfolio {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#portfolio h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.card {
+    border-radius: 10px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    overflow: hidden; /* Ensure contents don't overflow */
+    margin-bottom: 20px;
+}
+
+.card-body {
+    padding: 20px;
+}
+
+.card h3 {
+    font-size: 1.5em;
+    margin-bottom: 10px;
+}
+
+.card p {
+    font-size: 1.1em;
+    line-height: 1.6;
+    text-align: start;
+}
+
+.btn {
+    display: inline-block;
+    background-color: #007bff;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    text-decoration: none;
+}
+
+.btn:hover {
+    background-color: #0056b3;
+}
+/* Add this CSS to style the contact section */
+
+#contact {
+    padding: 50px 0;
+    text-align: center;
+}
+
+#contact h2 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+.container {
+    max-width: 900px;
+    margin: 0 auto;
+}
+
+.contact-info p {
+    font-size: 1.1em;
+    margin-bottom: 10px;
+}
+
+.contact-form h3 {
+    font-size: 1.5em;
+    margin-bottom: 20px;
+}
+
+.contact-form form {
+    max-width: 400px;
+    margin: 0 auto;
+}
+
+.contact-form input,
+.contact-form textarea,
+.contact-form button {
+    width: 100%;
+    margin-bottom: 20px;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.contact-form button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    cursor: pointer;
+}
+
+.contact-form button:hover {
+    background-color: #0056b3;
+}
+
+
+
+
